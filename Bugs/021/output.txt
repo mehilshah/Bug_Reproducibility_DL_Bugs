@@ -1,0 +1,42 @@
+2023-07-01 13:13:49.563249: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Epoch 1/5
+Traceback (most recent call last):
+  File "C:\Users\XYZ\Downloads\Bug Reproducibility\Bugs\021\main.py", line 22, in <module>
+    model.fit(x, y, epochs=5)
+  File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\tensorflow\python\eager\execute.py", line 52, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:
+
+Detected at node 'sparse_categorical_crossentropy/SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits' defined at (most recent call last):
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\Bugs\021\main.py", line 22, in <module>
+      model.fit(x, y, epochs=5)
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\engine\training.py", line 1650, in fit
+      tmp_logs = self.train_function(iterator)
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\engine\training.py", line 1249, in train_function
+      return step_function(self, iterator)
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\engine\training.py", line 1233, in step_function
+      outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\engine\training.py", line 1222, in run_step
+      outputs = model.train_step(data)
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\engine\training.py", line 1024, in train_step
+      loss = self.compute_loss(x, y, y_pred, sample_weight)
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\engine\training.py", line 1082, in compute_loss
+      return self.compiled_loss(
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\engine\compile_utils.py", line 265, in __call__
+      loss_value = loss_obj(y_t, y_p, sample_weight=sw)
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\losses.py", line 152, in __call__
+      losses = call_fn(y_true, y_pred)
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\losses.py", line 284, in call
+      return ag_fn(y_true, y_pred, **self._fn_kwargs)
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\losses.py", line 2098, in sparse_categorical_crossentropy
+      return backend.sparse_categorical_crossentropy(
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\backend.py", line 5633, in sparse_categorical_crossentropy
+      res = tf.nn.sparse_softmax_cross_entropy_with_logits(
+Node: 'sparse_categorical_crossentropy/SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits'
+logits and labels must have the same first dimension, got logits shape [25088,10] and labels shape [32]
+	 [[{{node sparse_categorical_crossentropy/SparseSoftmaxCrossEntropyWithLogits/SparseSoftmaxCrossEntropyWithLogits}}]] [Op:__inference_train_function_1423]

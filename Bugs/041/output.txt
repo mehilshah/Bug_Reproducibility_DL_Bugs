@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\041\main.py", line 19, in <module>
+    dw = (1/400) * torch.dot(input_tensor,(predictions - target_tensor).T)
+RuntimeError: 1D tensors expected, but got 2D and 2D tensors

@@ -1,0 +1,86 @@
+Architecture,Reproducible?,Code Snippet Present?,System Configuration Present?,Data Description Present?,Type of Bug,Framework,Input Data Generation,Neural Network Definition,Obsolete Parameter Removal,Framework Migration,Dataset Procurement,Downloading Models and Tokenizers,Logging,Import Addition and Dependency Resolution,Compiler Error Resolution,Hyperparameter Initialization
+MLP,Yes,Yes,No,Yes,Training Bug,TF + Keras,1,0,0,1,0,0,0,1,0,0
+MLP,Yes,Yes,No,Yes,Model Bug,TF + Keras,0,1,0,0,0,0,0,1,0,0
+CNN,Yes,Yes,No,Yes,Training Bug,TF + Keras,0,0,0,0,0,0,0,1,0,0
+-,Yes,No,No,No,API Bug,TF + Keras,0,1,0,0,1,0,0,1,0,1
+MLP,Yes,Yes,No,Yes,API Bug,TF + Keras,1,0,0,0,1,0,0,1,0,0
+MLP,Yes,Yes,No,Yes,Training Bug,TF + Keras,1,0,0,0,0,0,0,1,0,0
+CNN,Yes,Yes,No,Yes,Training Bug,TF + Keras,0,1,0,0,1,0,0,0,1,0
+CNN,Yes,Yes,No,No,Model Bug,TF + Keras,1,1,0,0,0,0,0,1,0,0
+CNN,Yes,Yes,No,Yes,Training Bug,TF + Keras,1,0,0,0,1,0,1,0,0,0
+CNN,Yes,Yes,No,Yes,Model Bug,TF + Keras,0,1,1,1,1,0,1,0,0,1
+CNN,Yes,Yes,No,Yes,Training Bug,TF + Keras,1,0,0,1,0,0,0,1,0,0
+CNN,Yes,Yes,No,Yes,Tensor and Input Bug,TF + Keras,1,0,0,0,0,0,0,1,0,1
+MLP,Yes,Yes,No,Yes,Training Bug,TF + Keras,1,0,0,1,0,0,0,0,0,0
+MLP,Yes,Yes,No,Yes,Training Bug,TF + Keras,0,0,0,0,0,0,0,0,0,0
+CNN,Yes,No,No,Yes,Tensor and Input Bug,TF + Keras,1,1,0,0,0,0,1,0,0,1
+CNN,Yes,Yes,No,Yes,Tensor and Input Bug,TF + Keras,0,0,0,1,0,0,0,0,0,0
+CNN,Yes,Yes,No,Yes,Tensor and Input Bug,TF + Keras,1,0,0,0,0,0,0,1,0,0
+MLP,Yes,Yes,No,Yes,Tensor and Input Bug,TF + Keras,1,0,1,0,0,0,1,0,1,1
+CNN,Yes,Yes,No,Yes,Training Bug,TF + Keras,1,0,0,0,0,0,0,0,0,0
+-,Yes,No,Yes,No,API Bug,TF + Keras,0,0,1,1,0,0,0,0,0,0
+MLP,Yes,Yes,No,Yes,Model Bug,TF + Keras,1,1,0,1,1,0,1,1,0,0
+MLP,Yes,Yes,No,Yes,Training Bug,TF + Keras,0,0,0,1,1,0,1,0,0,0
+MLP,Yes,Yes,No,Yes,Training Bug,TF + Keras,0,0,0,1,0,0,0,1,0,0
+MLP,Yes,Yes,No,Yes,Training Bug,TF + Keras,1,0,0,1,0,0,1,0,0,0
+CNN,Yes,Yes,No,Yes,Training Bug,TF + Keras,0,0,0,1,0,0,0,0,0,1
+MLP,Yes,Yes,No,Yes,Training Bug,TF + Keras,1,0,0,1,1,0,0,0,0,0
+MLP,Yes,Yes,No,Yes,Training Bug,TF + Keras,1,0,0,1,1,0,0,0,1,1
+MLP,Yes,Yes,No,Yes,Training Bug,TF + Keras,1,0,0,0,0,0,1,0,0,0
+MLP,Yes,Yes,No,Yes,Model Bug,TF + Keras,0,0,0,0,1,0,1,0,0,0
+VGG16,Yes,Yes,No,Yes,Model Bug,TF + Keras,0,1,0,0,0,0,1,1,0,1
+-,Yes,Yes,No,Yes,Tensor and Input Bug,PyTorch,0,0,0,0,0,0,0,0,0,0
+-,Yes,Yes,No,No,Training Bug,PyTorch,0,1,1,0,0,0,0,1,1,1
+MLP,Yes,Yes,No,No,Tensor and Input Bug,PyTorch,1,0,0,0,0,0,0,1,1,0
+MLP,Yes,Yes,No,No,Training Bug,PyTorch,1,0,1,0,0,0,1,1,1,0
+LSTM,Yes,Yes,No,No,Training Bug,TF + Keras,1,0,0,0,0,0,0,0,0,1
+LR,Yes,Yes,No,Yes,Tensor and Input Bug,PyTorch,1,0,0,0,0,0,1,1,0,1
+MLP,Yes,Yes,No,No,Model Bug,TF + Keras,1,0,0,0,0,0,0,0,0,1
+GAN,Yes,Yes,No,No,API Bug,PyTorch,0,1,0,0,1,0,0,1,0,0
+MLP,Yes,Yes,No,Yes,Training Bug,PyTorch,1,0,0,0,0,0,0,1,0,1
+Transformers,Yes,Yes,No,No,Model Bug,PyTorch,1,1,0,0,1,0,1,1,0,0
+-,Yes,Yes,No,Yes,Tensor and Input Bug,PyTorch,1,0,0,0,0,0,0,1,1,0
+Variational RNN,Yes,Yes,No,Yes,API Bug,PyTorch,0,0,0,0,0,0,0,0,0,1
+-,Yes,Yes,No,Yes,GPU Bug,PyTorch,0,0,0,0,0,0,0,0,0,0
+LSTM + MLP,Yes,Yes,No,Yes,Model Bug,TF + Keras,1,0,0,0,0,0,1,0,0,1
+-,Yes,Yes,No,No,Training Bug,TF + Keras,1,0,0,0,0,0,0,0,0,0
+LSTM,Yes,Yes,No,Yes,Training Bug,PyTorch,1,0,0,0,0,0,0,1,0,1
+-,Yes,Yes,No,No,Tensor and Input Bug,TF + Keras,0,0,0,0,0,0,0,0,0,1
+CNN,Yes,Yes,No,Yes,Model Bug,TF + Keras,0,1,1,1,1,0,0,0,1,1
+ResNet,Yes,Yes,No,Yes,Training Bug,PyTorch,1,0,0,0,0,0,0,0,0,0
+MLP,Yes,Yes,No,Yes,API Bug,TF + Keras,1,0,0,0,0,0,0,1,0,0
+RCNN,Yes,No,No,Yes,Training Bug,PyTorch,0,0,1,0,0,0,1,1,1,0
+Transfer Learning,Yes,Yes,No,Yes,Training Bug,PyTorch,0,0,1,0,1,0,0,1,1,1
+Autoencoder,Yes,No,No,No,Training Bug,PyTorch,0,1,0,0,1,0,1,0,1,1
+Attention,Yes,Yes,No,Yes,Model Bug,TF + Keras,0,1,0,0,0,0,0,1,0,0
+Attention,Yes,Yes,No,Yes,Model Bug,TF + Keras,0,1,0,0,1,0,1,0,0,1
+BERT,Yes,Yes,No,No,Model Bug,TF + Keras,0,1,0,0,1,1,1,1,1,1
+MLP,Yes,Yes,No,Yes,Model Bug,TF + Keras,0,0,1,0,1,0,0,1,0,0
+MLP,Yes,Yes,No,No,Model Bug,TF + Keras,0,1,0,1,0,0,0,0,1,1
+BERT,Yes,Yes,No,No,Model Bug,TF + Keras,0,1,0,0,0,0,0,1,1,1
+Transformers,Yes,Yes,No,No,Model Bug,PyTorch,0,0,0,0,0,0,1,0,0,1
+Gaussian Mixture Model,Yes,Yes,No,Yes,Model Bug,TF + Keras,1,1,0,0,0,0,0,1,1,0
+Transformers,Yes,Yes,No,Yes,Model Bug,PyTorch,0,1,0,0,0,0,0,0,0,0
+CNN,Yes,Yes,No,Yes,Model Bug,PyTorch,1,1,0,0,0,1,0,1,1,0
+-,Yes,Yes,No,Yes,Mixed Bug,TF + Keras,0,0,0,0,0,0,0,1,1,1
+LR,Yes,Yes,No,No,Mixed Bug,TF + Keras,1,1,0,0,0,0,0,1,0,1
+CNN,Yes,Yes,No,Yes,Mixed Bug,TF + Keras,1,0,0,1,1,0,0,0,1,1
+-,Yes,Yes,No,Yes,Mixed Bug,TF + Keras,1,0,0,0,0,0,0,1,0,1
+-,Yes,Yes,No,No,Tensor and Input Bug,TF + Keras,1,0,0,0,1,0,0,0,1,0
+-,Yes,Yes,No,No,Tensor and Input Bug,PyTorch,0,0,0,0,0,0,1,0,0,1
+CNN,Yes,Yes,No,Yes,Tensor and Input Bug,PyTorch,1,1,1,0,1,0,0,0,1,0
+ResNet,Yes,Yes,No,Yes,Tensor and Input Bug,PyTorch,1,0,1,0,1,0,1,0,0,0
+GAN,Yes,Yes,No,Yes,Tensor and Input Bug,PyTorch,0,0,0,0,1,0,0,0,0,0
+-,Yes,Yes,No,Yes,Tensor and Input Bug,TF + Keras,0,0,0,0,0,0,0,0,0,1
+NLP,Yes,Yes,No,Yes,Tensor and Input Bug,PyTorch,1,0,1,0,0,0,0,1,1,1
+LR,Yes,Yes,No,Yes,Tensor and Input Bug,TF + Keras,0,0,1,0,0,0,1,1,0,1
+-,Yes,Yes,No,Yes,Tensor and Input Bug,TF + Keras,0,0,0,0,0,0,1,1,0,1
+CNN,Yes,Yes,No,Yes,API Bug,TF + Keras,1,0,0,0,0,0,1,0,0,1
+Transformers,Yes,Yes,No,No,API Bug,PyTorch,1,0,0,0,0,1,0,1,0,1
+VGG19,Yes,Yes,No,Yes,API Bug,TF + Keras,0,0,0,0,0,0,0,0,0,0
+-,Yes,Yes,Yes,No,GPU Bug,TF + Keras,0,0,0,0,0,0,0,0,0,0
+-,Yes,Yes,No,Yes,GPU Bug,TF + Keras,0,0,0,0,0,0,0,0,0,0
+-,Yes,Yes,No,No,API Bug,PyTorch,0,0,0,0,0,0,1,0,0,0
+-,Yes,Yes,No,Yes,API Bug,PyTorch,0,0,0,0,0,0,0,0,0,0
+CNN,Yes,Yes,No,Yes,Tensor and Input Bug,PyTorch,0,0,1,0,0,0,1,1,1,0
+MLP,Yes,Yes,No,Yes,Tensor and Input Bug,PyTorch,1,0,1,0,0,0,1,1,0,1

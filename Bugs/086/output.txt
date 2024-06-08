@@ -1,0 +1,5 @@
+epoch 0, loss 2.312664270401001
+Traceback (most recent call last):
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\086\main.py", line 40, in <module>
+    loss = loss(preds,ys)
+TypeError: 'Tensor' object is not callable

@@ -1,0 +1,5 @@
+model  = Sequential()
+model.add(Dense(5, input_dim=len(X_data[0]), activation='sigmoid' ))
+model.add(Dense(1, activation = 'sigmoid'))
+model.compile(loss='mean_squared_error', optimizer='adam', metrics=['acc'])
+model.fit(X_data, y_data, epochs=20, batch_size=10)

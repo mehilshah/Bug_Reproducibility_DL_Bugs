@@ -1,0 +1,86 @@
+Type of Bug,Data,Neural Network,Hyperparameters,Training Code,Logs
+Training Bug,1,1,1,1,1
+Model Bug,1,1,1,1,0
+Training Bug,1,1,1,1,0
+API Bug,0,0,0,1,1
+API Bug,1,1,1,1,1
+Training Bug,1,1,1,1,0
+Training Bug,0,1,1,1,1
+Model Bug,0,1,0,0,1
+Training Bug,0,1,1,1,0
+Model Bug,0,1,0,1,1
+Training Bug,1,1,1,1,1
+Tensor and Input Bug,1,1,0,1,1
+Training Bug,1,1,1,1,1
+Training Bug,0,0,0,1,1
+Tensor and Input Bug,1,0,0,0,1
+Tensor and Input Bug,1,1,1,1,1
+Tensor and Input Bug,1,1,0,0,1
+Tensor and Input Bug,1,1,1,1,1
+Training Bug,1,1,1,0,1
+API Bug,0,0,0,1,1
+Model Bug,1,1,0,1,1
+Training Bug,1,1,1,1,1
+Training Bug,1,1,1,1,1
+Training Bug,1,1,1,1,1
+Training Bug,1,1,0,1,1
+Training Bug,0,1,1,1,1
+Training Bug,1,1,1,1,1
+Training Bug,1,1,0,1,0
+Model Bug,1,0,0,1,0
+Model Bug,1,1,1,0,0
+Tensor and Input Bug,1,1,1,1,1
+Training Bug,0,0,1,1,1
+Tensor and Input Bug,1,1,0,1,1
+Training Bug,1,0,1,1,1
+Training Bug,1,0,1,0,1
+Tensor and Input Bug,1,1,0,1,1
+Model Bug,1,1,1,1,1
+API Bug,1,1,1,1,1
+Training Bug,1,0,1,1,1
+Model Bug,1,0,1,1,1
+Tensor and Input Bug,1,1,0,0,1
+API Bug,0,1,0,1,1
+GPU Bug,0,0,0,1,1
+Model Bug,0,1,0,1,1
+Training Bug,1,0,0,1,1
+Training Bug,1,0,1,1,1
+Tensor and Input Bug,1,1,0,0,1
+Model Bug,1,1,1,0,1
+Training Bug,1,0,0,1,1
+API Bug,1,1,0,1,1
+Training Bug,1,0,1,1,1
+Training Bug,1,1,1,1,1
+Training Bug,1,0,0,1,1
+Model Bug,1,1,1,0,1
+Model Bug,0,1,0,1,1
+Model Bug,1,0,1,1,1
+Model Bug,1,1,1,1,0
+Model Bug,1,1,1,1,1
+Model Bug,1,1,1,1,1
+Model Bug,0,0,1,0,1
+Model Bug,1,0,0,0,1
+Model Bug,0,1,0,1,1
+Model Bug,1,0,1,1,1
+Mixed Bug,1,1,0,1,1
+Mixed Bug,1,0,0,1,0
+Mixed Bug,0,1,1,1,0
+Mixed Bug,1,1,0,1,1
+Tensor and Input Bug,1,1,1,0,1
+Tensor and Input Bug,1,1,0,1,1
+Tensor and Input Bug,1,0,1,0,1
+Tensor and Input Bug,1,0,0,1,1
+Tensor and Input Bug,1,0,0,1,1
+Tensor and Input Bug,1,1,1,1,1
+Tensor and Input Bug,0,0,0,1,1
+Tensor and Input Bug,1,1,1,0,0
+Tensor and Input Bug,1,1,0,1,1
+API Bug,0,1,1,0,1
+API Bug,0,1,0,1,1
+API Bug,0,1,0,1,0
+GPU Bug,0,0,0,0,1
+GPU Bug,0,0,0,1,1
+API Bug,1,1,1,1,1
+API Bug,0,0,0,0,1
+Tensor and Input Bug,1,0,1,1,1
+Tensor and Input Bug,1,0,0,1,1

@@ -1,0 +1,15 @@
+Run 1
+
+first multiplication time:  0.536741287688290
+second multiplication time:  4.512466867563412
+constant init time:  5.2810382103810238
+constant init plus third multiplication time:  5.87310923267432
+
+Run 2
+second multiplication time:  5.21791825731237
+constant init time:  6.12801481291032
+constant init plus third multiplication time:  5.921319539547913
+
+Run 3
+constant init time:  0.12974862181372
+constant init plus third multiplication time:  0.972354613286592

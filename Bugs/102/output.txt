@@ -1,0 +1,37 @@
+2023-07-25 12:30:13.154238: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'nvcuda.dll'; dlerror: nvcuda.dll not found
+2023-07-25 12:30:13.154981: W tensorflow/stream_executor/cuda/cuda_driver.cc:263] failed call to cuInit: UNKNOWN ERROR (303)
+2023-07-25 12:30:13.160344: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: LAPTOP-V1A9M2RL
+2023-07-25 12:30:13.160792: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: LAPTOP-V1A9M2RL
+2023-07-25 12:30:13.161620: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Traceback (most recent call last):
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\102\original_code_snippet.py", line 14, in <module>
+    metric.update_state(act_numpy, pred_numpy)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\keras\utils\metrics_utils.py", line 77, in decorated
+    update_op = update_state_fn(*args, **kwargs)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\keras\metrics\base_metric.py", line 143, in update_state_fn
+    return ag_update_state(*args, **kwargs)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 692, in wrapper
+    raise e.ag_error_metadata.to_exception(e)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 689, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 439, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "C:\Users\MEHILS~1\AppData\Local\Temp\__autograph_generated_fileuyond6x2.py", line 25, in tf__update_state
+    ag__.if_stmt(ag__.ld(self).threshold is None, if_body, else_body, get_state, set_state, ('y_pred',), 1)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\tensorflow\python\autograph\operators\control_flow.py", line 1363, in if_stmt     
+    _py_if_stmt(cond, body, orelse)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\tensorflow\python\autograph\operators\control_flow.py", line 1416, in _py_if_stmt 
+    return body() if cond else orelse()
+  File "C:\Users\MEHILS~1\AppData\Local\Temp\__autograph_generated_fileuyond6x2.py", line 19, in if_body
+    y_pred = ag__.converted_call(ag__.ld(tf).logical_and, (ag__.ld(y_pred) >= ag__.ld(threshold), ag__.converted_call(ag__.ld(tf).abs, (ag__.ld(y_pred),), None, fscope) > 1e-12), None, fscope)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\tensorflow\python\ops\math_ops.py", line 1875, in wrapper
+    return fn(x, y, *args, **kwargs)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\tensorflow\python\ops\gen_math_ops.py", line 4097, in greater
+    _result = pywrap_tfe.TFE_Py_FastPathExecute(
+TypeError: in user code:
+
+    File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\tensorflow_addons\metrics\f_scores.py", line 148, in update_state  *
+        y_pred = tf.logical_and(y_pred >= threshold, tf.abs(y_pred) > 1e-12)
+
+    TypeError: Cannot convert 1e-12 to EagerTensor of dtype int32

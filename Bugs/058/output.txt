@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\058\main.py", line 9, in <module>
+    augmented_image = aug(resized_img)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\imgaug\augmenters\meta.py", line 2008, in __call__
+    return self.augment(*args, **kwargs)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\imgaug\augmenters\meta.py", line 1901, in augment
+    assert ia.is_single_bool(return_batch), (
+AssertionError: Expected boolean as argument for 'return_batch', got type <class 'numpy.ndarray'>. Call augment() only with named arguments, e.g. augment(images=<array>).

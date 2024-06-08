@@ -1,0 +1,11 @@
+model = Sequential()
+model.add(Dense(78, activation='relu', input_shape = 3))
+model.add(Dense(54, activation='relu'))
+model.add(Dense(54, activation='relu'))
+model.add(Dense(5))
+
+inputs = keras.layers.Input(shape=3) #(X.shape[1],)
+out = keras.layers.Dense(78, activation='relu')(inputs)
+out = keras.layers.Dense(54, activation='relu')(out)
+out = keras.layers.Dense(54, activation='relu')(out)
+out = keras.layers.Dense(5, activation='relu')(out)

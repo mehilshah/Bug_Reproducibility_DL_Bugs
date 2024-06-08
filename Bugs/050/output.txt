@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\050\main.py", line 85, in <module>
+    mGen = MGenDenseNet(1).to(device)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\050\main.py", line 67, in __init__
+    block = DenseBlock(num_layers=num_layers, in_size=num_features, growth_rate=growth_rate, block=block, droprate=drop_rate) ### Error thrown on this line
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\050\main.py", line 46, in __init__
+    self.layer = self._make_layer(block, in_size, growth_rate, num_layers, droprate)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\050\main.py", line 51, in _make_layer
+    layers.append(block(in_size, in_size-i*growth_rate, droprate))
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+TypeError: DenseBlock.forward() takes 2 positional arguments but 4 were given

@@ -1,0 +1,52 @@
+2023-07-01 11:22:12.414071: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+C:\Users\XYZ\Downloads\Bug Reproducibility\Bugs\009\main.py:46: UserWarning: `Model.fit_generator` is deprecated and will be removed in a future version. Please use `Model.fit`, which supports generators.
+  history = model.fit_generator(generator=train_generator,
+Epoch 1/5
+2023-07-01 11:22:20.609023: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+C:\Users\XYZ\Downloads\Bug Reproducibility\Bugs\009\main.py:46: UserWarning: `Model.fit_generator` is deprecated and will be removed in a future version. Please use `Model.fit`, which supports generators.
+  history = model.fit_generator(generator=train_generator,
+Epoch 1/5
+Exception in thread Thread-1 (_run):
+Traceback (most recent call last):
+  File "C:\Users\Mehil Shah\AppData\Local\Programs\Python\Python310\lib\threading.py", line 1009, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Mehil Shah\AppData\Local\Programs\Python\Python310\lib\threading.py", line 946, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\utils\data_utils.py", line 781, in _run
+    with closing(self.executor_fn(_SHARED_SEQUENCES)) as executor:
+  File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\utils\data_utils.py", line 756, in pool_fn
+    pool = get_pool_class(True)(
+  File "C:\Users\Mehil Shah\AppData\Local\Programs\Python\Python310\lib\multiprocessing\context.py", line 119, in Pool
+    return Pool(processes, initializer, initargs, maxtasksperchild,
+  File "C:\Users\Mehil Shah\AppData\Local\Programs\Python\Python310\lib\multiprocessing\pool.py", line 212, in __init__
+    self._repopulate_pool()
+  File "C:\Users\Mehil Shah\AppData\Local\Programs\Python\Python310\lib\multiprocessing\pool.py", line 303, in _repopulate_pool
+    return self._repopulate_pool_static(self._ctx, self.Process,
+  File "C:\Users\Mehil Shah\AppData\Local\Programs\Python\Python310\lib\multiprocessing\pool.py", line 326, in _repopulate_pool_static
+    w.start()
+  File "C:\Users\Mehil Shah\AppData\Local\Programs\Python\Python310\lib\multiprocessing\process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "C:\Users\Mehil Shah\AppData\Local\Programs\Python\Python310\lib\multiprocessing\context.py", line 327, in _Popen
+    return Popen(process_obj)
+  File "C:\Users\Mehil Shah\AppData\Local\Programs\Python\Python310\lib\multiprocessing\popen_spawn_win32.py", line 45, in __init__
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "C:\Users\Mehil Shah\AppData\Local\Programs\Python\Python310\lib\multiprocessing\spawn.py", line 154, in get_preparation_data
+    _check_not_importing_main()
+  File "C:\Users\Mehil Shah\AppData\Local\Programs\Python\Python310\lib\multiprocessing\spawn.py", line 134, in _check_not_importing_main
+    raise RuntimeError('''
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.

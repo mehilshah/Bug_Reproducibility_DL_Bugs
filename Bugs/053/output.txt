@@ -1,0 +1,28 @@
+**********************************
+ Shape of Q is torch.Size([1, 8, 2048, 32])
+**********************************
+ Shape of K is torch.Size([1, 8, 2048, 32])
+**********************************
+torch.Size([2, 1, 1, 1024])
+**********************************
+torch.Size([1, 8, 2048, 2048])
+Traceback (most recent call last):
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\053\main.py", line 488, in <module>
+    out, attention = model(x, trg[:, :-1])
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\053\main.py", line 399, in forward
+    enc_src = self.encoder(src, src_mask)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\053\main.py", line 71, in forward
+    src = layer(src, src_mask)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\053\main.py", line 99, in forward
+    _src, _ = self.self_attention(src, src, src, src_mask)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\053\main.py", line 178, in forward
+    energy = energy.masked_fill(mask == 0, -1e10)
+RuntimeError: The size of tensor a (1024) must match the size of tensor b (2048) at non-singleton dimension 3

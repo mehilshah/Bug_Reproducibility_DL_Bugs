@@ -1,0 +1,68 @@
+2023-07-21 11:56:16.648778: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Model: "s2s_model"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ encoder_inputs (InputLayer  [(None, None)]               0         []                            
+ )                                                                                                
+                                                                                                  
+ decoder_inputs (InputLayer  [(None, None)]               0         []                            
+ )                                                                                                
+                                                                                                  
+ encoder_embs (Embedding)    (None, None, 200)            20000     ['encoder_inputs[0][0]']      
+                                                                                                  
+ decoder_embs (Embedding)    (None, None, 200)            20000     ['decoder_inputs[0][0]']      
+                                                                                                  
+ encoder_LSTM (LSTM)         [(None, 128),                168448    ['encoder_embs[0][0]']        
+                              (None, 128),                                                        
+                              (None, 128)]                                                        
+                                                                                                  
+ decoder_LSTM (LSTM)         [(None, None, 128),          168448    ['decoder_embs[0][0]',        
+                              (None, 128),                           'encoder_LSTM[0][1]',        
+                              (None, 128)]                           'encoder_LSTM[0][2]']        
+                                                                                                  
+ attention_layer (Attention  (None, None, 128)            0         ['encoder_LSTM[0][0]',        
+ )                                                                   'decoder_LSTM[0][0]']        
+                                                                                                  
+ concat_layer (Concatenate)  (None, None, 256)            0         ['decoder_LSTM[0][0]',        
+                                                                     'attention_layer[0][0]']     
+                                                                                                  
+ time_distributed (TimeDist  (None, None, 100)            25700     ['concat_layer[0][0]']        
+ ributed)                                                                                         
+                                                                                                  
+==================================================================================================
+Total params: 402596 (1.54 MB)
+Trainable params: 402596 (1.54 MB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________
+Epoch 1/100
+Traceback (most recent call last):
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\068\original_code_snippet.py", line 45, in <module>
+    model.fit([encoder_training_input, decoder_training_input], decoder_training_target,
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\MEHILS~1\AppData\Local\Temp\__autograph_generated_file0pokf20a.py", line 15, in tf__train_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\keras\src\engine\training.py", line 1338, in train_function  *
+        return step_function(self, iterator)
+    File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\keras\src\engine\training.py", line 1322, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\keras\src\engine\training.py", line 1303, in run_step  **
+        outputs = model.train_step(data)
+    File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\keras\src\engine\training.py", line 1080, in train_step
+        y_pred = self(x, training=True)
+    File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\keras\src\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\keras\src\backend.py", line 3582, in concatenate
+        return tf.concat([to_dense(x) for x in tensors], axis)
+
+    ValueError: Exception encountered when calling layer 'concat_layer' (type Concatenate).
+    
+    Dimension 1 in both shapes must be equal, but are 12 and 32. Shapes are [32,12] and [32,32]. for '{{node s2s_model/concat_layer/concat}} = ConcatV2[N=2, T=DT_FLOAT, Tidx=DT_INT32](s2s_model/decoder_LSTM/PartitionedCall:1, s2s_model/attention_layer/MatMul_1, s2s_model/concat_layer/concat/axis)' with input shapes: [32,12,128], [32,32,128], [] and with computed input tensors: input[2] = <2>.
+    
+    Call arguments received by layer 'concat_layer' (type Concatenate):
+      • inputs=['tf.Tensor(shape=(32, 12, 128), dtype=float32)', 'tf.Tensor(shape=(32, 32, 128), dtype=float32)']
+

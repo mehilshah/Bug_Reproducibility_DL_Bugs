@@ -1,0 +1,27 @@
+/usr/local/lib/python3.10/dist-packages/fastai/callback/core.py:69: UserWarning: You are shadowing an attribute (generator) that exists in the learner. Use `self.learn.generator` to avoid this
+  warn(f"You are shadowing an attribute ({name}) that exists in the learner. Use `self.learn.{name}` to avoid this")
+/usr/local/lib/python3.10/dist-packages/fastai/callback/core.py:69: UserWarning: You are shadowing an attribute (critic) that exists in the learner. Use `self.learn.critic` to avoid this
+  warn(f"You are shadowing an attribute ({name}) that exists in the learner. Use `self.learn.{name}` to avoid this")
+/usr/local/lib/python3.10/dist-packages/fastai/callback/core.py:69: UserWarning: You are shadowing an attribute (gen_mode) that exists in the learner. Use `self.learn.gen_mode` to avoid this
+  warn(f"You are shadowing an attribute ({name}) that exists in the learner. Use `self.learn.{name}` to avoid this")
+epoch	train_loss	gen_loss	crit_loss	time
+0	-0.211103	0.107861	-0.305620	00:12
+/usr/local/lib/python3.10/dist-packages/fastprogress/fastprogress.py:73: UserWarning: Your generator is empty.
+  warn("Your generator is empty.")
+torch.Size([3, 64, 64])
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-3-904e12fb82fb> in <cell line: 44>()
+     42 img = student.predict(generate_noise('pocheman',size=100))
+     43 print(img[0].size())
+---> 44 im =transforms.ToPILImage()(img[0]).convert('RGB')
+
+1 frames
+/usr/local/lib/python3.10/dist-packages/torchvision/transforms/functional.py in to_pil_image(pic, mode)
+    333 
+    334     if mode is None:
+--> 335         raise TypeError(f"Input type {npimg.dtype} is not supported")
+    336 
+    337     return Image.fromarray(npimg, mode=mode)
+
+TypeError: Input type int64 is not supported

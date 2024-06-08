@@ -1,0 +1,6 @@
+ipython
+matplotlib
+numpy
+spacy
+torch
+torchtext

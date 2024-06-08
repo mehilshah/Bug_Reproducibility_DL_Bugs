@@ -1,0 +1,16 @@
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-7-31836eab282d> in <cell line: 14>()
+     12 input_ids = text_to_input('A sentence.')
+     13 x_embedding = extract_embeddings(input_ids)
+---> 14 output = rest_of_bert(x_embedding)
+
+4 frames
+/usr/local/lib/python3.10/dist-packages/transformers/utils/generic.py in __getitem__(self, k)
+    318             return inner_dict[k]
+    319         else:
+--> 320             return self.to_tuple()[k]
+    321 
+    322     def __setattr__(self, name, value):
+
+TypeError: tuple indices must be integers or slices, not tuple

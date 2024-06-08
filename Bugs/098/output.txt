@@ -1,0 +1,10 @@
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-1-2d4baf65f56e> in <cell line: 7>()
+      5 X = torch.DoubleTensor(X).cuda()
+      6 
+----> 7 X_split = np.array_split(X.numpy(), 
+      8                          indices_or_sections = 2,
+      9                          axis = 0)
+
+TypeError: can't convert cuda:0 device type tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.

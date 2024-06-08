@@ -1,0 +1,7 @@
+False
+Traceback (most recent call last):
+  File "C:\Users\XYZ\Downloads\Research Projects\Bug Reproducibility\Bugs\038\main.py", line 3, in <module>      
+    torch.randn(1).to("cuda")
+  File "C:\Users\XYZ\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\torch\cuda\__init__.py", line 239, in _lazy_init
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled
