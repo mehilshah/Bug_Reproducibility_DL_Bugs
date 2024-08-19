@@ -1,0 +1,1 @@
+I followed a tutorial on neural network model evaluation using cross-validation with code (given below). The accuracy was supposed to be around 95.33% (4.27%) but I got ~Accuracy: 34.00% (13.15%) on a few attempts. The model code seems exactly the same. I downloaded the data from here as instructed. What could go wrong? Thanks

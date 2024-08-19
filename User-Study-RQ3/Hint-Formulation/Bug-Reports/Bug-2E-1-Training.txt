@@ -1,0 +1,1 @@
+I try to train a CNN model that classifies the handwritten digit using Keras, but I am getting low accuracy in the training (lower than 10%) and a big error. I tried a simple neural network without concolutions and it didn't work as well. Could anyone advice me on how to improve my model?

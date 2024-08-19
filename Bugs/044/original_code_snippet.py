@@ -1,0 +1,8 @@
+model = Sequential()
+model.add(Dense(3000, input_shape=(x_train.shape[1:]), activation='linear'))
+model.add(Dense(2500, activation='relu'))
+model.add(Dense(2500, activation='relu'))
+model.add(Dense(2500, activation='relu'))
+model.add(Dense(2500, activation='relu'))
+model.add(Dense(y_train.shape[1], activation='sigmoid'))
+model.compile(optimizer=Adam(learning_rate=0.0001), loss='binary_crossentropy', metrics=['accuracy'])

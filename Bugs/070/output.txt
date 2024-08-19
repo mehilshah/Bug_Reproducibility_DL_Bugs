@@ -1,0 +1,83 @@
+Epoch 1/2
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+<ipython-input-1-9788284b57c2> in <cell line: 37>()
+     35         (sentences, labels))
+     36 
+---> 37 classifier_model.fit(x=train_dataset, epochs=2)
+
+4 frames
+/usr/local/lib/python3.10/dist-packages/tensorflow_hub/keras_layer.py in <lambda>()
+     70                         training = False
+     71                     ag__.if_stmt(ag__.ld(self).trainable, if_body_2, else_body_2, get_state_2, set_state_2, ('training',), 1)
+---> 72                     result = ag__.converted_call(ag__.ld(smart_cond).smart_cond, (ag__.ld(training), ag__.autograph_artifact(lambda : ag__.converted_call(ag__.ld(f), (), dict(training=True), fscope)), ag__.autograph_artifact(lambda : ag__.converted_call(ag__.ld(f), (), dict(training=False), fscope))), None, fscope)
+     73                 result = ag__.Undefined('result')
+     74                 ag__.if_stmt(ag__.not_(ag__.ld(self)._has_training_argument), if_body_3, else_body_3, get_state_3, set_state_3, ('result', 'training'), 1)
+
+ValueError: in user code:
+
+    File "/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py", line 1338, in train_function  *
+        return step_function(self, iterator)
+    File "/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py", line 1322, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py", line 1303, in run_step  **
+        outputs = model.train_step(data)
+    File "/usr/local/lib/python3.10/dist-packages/keras/src/engine/training.py", line 1080, in train_step
+        y_pred = self(x, training=True)
+    File "/usr/local/lib/python3.10/dist-packages/keras/src/utils/traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "/tmp/__autograph_generated_file3lzidea1.py", line 74, in tf__call
+        ag__.if_stmt(ag__.not_(ag__.ld(self)._has_training_argument), if_body_3, else_body_3, get_state_3, set_state_3, ('result', 'training'), 1)
+    File "/tmp/__autograph_generated_file3lzidea1.py", line 72, in else_body_3
+        result = ag__.converted_call(ag__.ld(smart_cond).smart_cond, (ag__.ld(training), ag__.autograph_artifact(lambda : ag__.converted_call(ag__.ld(f), (), dict(training=True), fscope)), ag__.autograph_artifact(lambda : ag__.converted_call(ag__.ld(f), (), dict(training=False), fscope))), None, fscope)
+    File "/tmp/__autograph_generated_file3lzidea1.py", line 72, in <lambda>
+        result = ag__.converted_call(ag__.ld(smart_cond).smart_cond, (ag__.ld(training), ag__.autograph_artifact(lambda : ag__.converted_call(ag__.ld(f), (), dict(training=True), fscope)), ag__.autograph_artifact(lambda : ag__.converted_call(ag__.ld(f), (), dict(training=False), fscope))), None, fscope)
+
+    ValueError: Exception encountered when calling layer 'preprocessing' (type KerasLayer).
+    
+    in user code:
+    
+        File "/usr/local/lib/python3.10/dist-packages/tensorflow_hub/keras_layer.py", line 242, in call  *
+            result = smart_cond.smart_cond(training,
+    
+        ValueError: Could not find matching concrete function to call loaded from the SavedModel. Got:
+          Positional arguments (3 total):
+            * <tf.Tensor 'inputs:0' shape=() dtype=string>
+            * False
+            * None
+          Keyword arguments: {}
+        
+         Expected these arguments to match one of the following 4 option(s):
+        
+        Option 1:
+          Positional arguments (3 total):
+            * TensorSpec(shape=(None,), dtype=tf.string, name='sentences')
+            * False
+            * None
+          Keyword arguments: {}
+        
+        Option 2:
+          Positional arguments (3 total):
+            * TensorSpec(shape=(None,), dtype=tf.string, name='sentences')
+            * True
+            * None
+          Keyword arguments: {}
+        
+        Option 3:
+          Positional arguments (3 total):
+            * TensorSpec(shape=(None,), dtype=tf.string, name='inputs')
+            * False
+            * None
+          Keyword arguments: {}
+        
+        Option 4:
+          Positional arguments (3 total):
+            * TensorSpec(shape=(None,), dtype=tf.string, name='inputs')
+            * True
+            * None
+          Keyword arguments: {}
+    
+    
+    Call arguments received by layer 'preprocessing' (type KerasLayer):
+      • inputs=tf.Tensor(shape=(), dtype=string)
+      • training=True

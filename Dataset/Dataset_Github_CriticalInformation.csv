@@ -1,0 +1,64 @@
+#,bug_type,root_cause,symptom,commit,repository,type,D,N,H,L,C
+2,Deprecated API,Deprecated API,Crash,9f8fb94,hunkim/DeepLearningZeroToAll/,API,0,0,1,1,1
+4,Missing API call,Missing API call,Bad performance,1bcc1ef,gabrieleangeletti/Deep-Learning-TensorFlow/,API,1,1,0,1,0
+8,Deprecated API,Deprecated API,Crash,a22ccdc,j201/gibbs-pruning/,API,1,0,0,1,0
+11,Deprecated API,Deprecated API,Crash,935156,jiajunhua/Keras-GAN/,API,1,1,0,1,1
+24,Missing argument scoping,Missing argument scoping,Crash,b5c4c9e,hunkim/DeepLearningZeroToAll/,API,1,1,0,1,1
+27,Wrong API usage,Wrong API usage,Crash,47351d6,dbczumar/mlflow-keras-mnist/,API,0,1,0,0,1
+47,Wrong API usage,Wrong API usage,Crash,201244,sarus-tech/tf2-published-models/,API,1,0,0,1,0
+48,Deprecated API,Deprecated API,Crash,d4d0c9d,shubhlohiya/facial-expression-recognition-keras/,API,1,1,0,0,1
+59,Deprecated API,Deprecated API,Crash,2d7bd1d,tensorflow/models/,API,1,1,0,1,1
+1,Wrong layer type,Wrong layer type,Crash,f138d57,jiajunhua/Keras-GAN/,Model,0,1,1,0,0
+3,Wrong network architecture,Wrong network architecture,Crash,192923d,sarus-tech/tf2-published-models/,Model,0,1,0,0,0
+9,Suboptimal network structure,Suboptimal network structure,Crash,af986a8,warrenb95/keras_x-ray_regression_cnn/,Model,1,0,0,1,1
+10,Missing dense layer,Missing dense layer,Bad performance,2a2a46f,eangelou/kerasma/,Model,0,0,0,1,1
+13,Suboptimal network structure,Suboptimal network structure,Bad performance,4bf818d,jason71995/Keras_ODENet/,Model,1,1,0,1,1
+14,Missing dropout layer,Missing dropout layer,Bad performance,d73cfe7,shamitv/ImageClassifier/,Model,0,1,1,1,1
+15,Wrong type of activation function,Wrong type of activation function,Bad performance,e6a48ce,ulmefors/Traffic-Sign-Classifier/,Model,1,1,1,1,1
+17,Wrong network architecture,Wrong network architecture,Crash,192923d,sarus-tech/tf2-published-models/,Model,0,1,1,1,0
+20,Wrong weights initialisation,Wrong weights initialisation,Crash,34af79d,tensorflow/models/,Model,0,1,0,1,1
+22,Suboptimal network structure,Suboptimal network structure,Bad performance,b29cab7,dbczumar/mlflow-keras-mnist/,Model,0,0,1,0,1
+26,Wrong type of activation function,Wrong type of activation function,Bad performance,eba6bed,DanilaEremenko/NeuralNetwork/,Model,0,1,1,1,1
+28,Suboptimal network structure,Suboptimal network structure,Bad performance,3cfbfaf,alexchungio/Keras-Learning-Advance/,Model,1,1,1,1,1
+29,Suboptimal network structure,Suboptimal network structure,Bad performance,b1b6d938bdd7a3e30f3d1fa58009f4850cbc2958#diff-e1afe2b6eb4252b0f813153018d4e40a721ed0bac509ce0a3f75d14c046fc800,taashi-s/UNet_Keras/,Model,1,1,1,1,0
+31,Suboptimal network structure,Suboptimal network structure,Bad performance,4bf818d,jason71995/Keras_ODENet/,Model,0,0,1,1,0
+35,Wrong filter size for convolutional layer,Wrong filter size for convolutional layer,Bad performance,561c82e,vmelan/cifar-experiment/,Model,0,1,1,1,1
+40,Suboptimal network structure,Suboptimal network structure,Bad performanace,4d9f8a2,airalcorn2/RankNet/,Model,1,0,1,1,1
+42,Suboptimal network structure,Suboptimal network structure,Bad performance,86eb14d,dbczumar/mlflow-keras-mnist/,Model,1,0,0,1,0
+44,Wrong layer type,Wrong layer type,Bad performance,4d9f8a2,airalcorn2/RankNet/,Model,1,1,1,0,1
+45,Wrong network architecture,Wrong network architecture,Bad performance,90f63a1,tensorflow/models/,Model,1,0,1,0,1
+52,Wrong filter size for convolution layer,Wrong filter size for convolution layer,Bad performance,b5acb01,AlexGidiotis/Keras-tutorial-on-CNNs/,Model,0,0,1,1,1
+54,Suboptimal network structure,Suboptimal network structure,Bad performance,2.38E+43,ronnyworm/keras_catsdogs/,Model,0,0,1,1,1
+55,Suboptimal network structure,Suboptimal network structure,Bad performance,9d7a233,caslei/keras/,Model,0,1,0,1,1
+12,Tensor shape mismatch,Tensor shape mismatch,Crash,69cd7e4,google/seq2seq/,Tensor and Input,1,0,1,0,1
+21,Wrong shape of input data,Wrong shape of input data,Crash,19c23e7,tensorflow/models/,Tensor and Input,1,0,1,1,1
+23,Missing preprocessing,Missing preprocessing,Bad performance,31a95ee,rafalschmidt97/rnn-practice/,Tensor and Input,1,1,1,1,1
+36,Redundant data augmentation,Redundant data augmentation,Bad performance,a6c4a6d,chiphuyen/stanford-tensorflow-tutorials/,Tensor and Input,1,0,1,1,1
+49,Wrong tensor shape,Wrong tensor shape,Crash,d8446ef,lmxing/hello-tf-keras/,Tensor and Input,1,0,0,1,1
+50,Wrong Preprocessing,Wrong preprocessing of train and test data,Crash,55a34ae,tensorflow/models/,Tensor and Input,1,0,0,1,1
+56,Wrong shape of input data,Wrong shape of input data,Crash,c4332f1,kyuhyoung/keras_exercise/,Tensor and Input,1,0,0,1,0
+62,Wrong preprocessing,Wrong preprocessing,Bad performance,18c4681,srihari-humbarwadi/DeepLabV3_Plus-Tensorflow2.0/,Tensor and Input,1,0,0,1,1
+0,Wrong selection of loss function,Wrong selection of loss function,Bad performance,d9b30a0,alexander-travov/gol_nn/,Training,1,1,0,1,1
+5,Suboptimal number of epochs,Suboptimal number of epochs,Bad performance,a83c151,sarus-tech/tf2-published-models/,Training,1,0,1,0,1
+6,Wrong selection of loss function,Wrong selection of loss function,Bad performance,a83c151,sarus-tech/tf2-published-models/,Training,1,1,0,1,1
+7,Wrong selection of loss function,Wrong selection of loss function,Bad performance,ce1a2ca,srihari-humbarwadi/DeepLabV3_Plus-Tensorflow2.0/,Training,1,0,1,0,0
+16,Wrong loss function calculation,Wrong loss function calculation,Crash,5e3033e,id4thomas/TF2-MNIST-AAE/,Training,0,0,1,0,0
+18,Suboptimal batch size,Suboptimal batch size,Bad performance,2.38E+43,ronnyworm/keras_catsdogs/,Training,1,1,1,1,1
+19,Wrong loss function calculation,Wrong loss function calculation,Incorrect functionality,d816971,tensorflow/models/,Training,1,0,1,1,0
+25,Missing variable initialization,Missing variable initialization,Crash,9d96e9f,tensorflow/models/,Training,1,0,1,0,0
+30,Suboptimal batch size,Suboptimal batch size,Bad performance,b1b6d938bdd7a3e30f3d1fa58009f4850cbc2958#diff-2e5ad92c43aa96cc3a9cef6c6aec998b216f1379c43b1f651013d25e55989312,taashi-s/UNet_Keras/,Training,1,1,0,0,1
+32,Wrong loss function calculation,Wrong loss function calculation,Incorrect functionality,726b371,gabrieleangeletti/Deep-Learning-TensorFlow/,Training,1,0,1,1,1
+33,Wrong optimisation function,Wrong optimisation function,Bad performance,35e12d4,hunkim/DeepLearningZeroToAll/,Training,1,1,1,0,0
+34,Suboptimal learning rate,Suboptimal learning rate,Bad performance,49bea76,alexander-travov/gol_nn/,Training,1,1,0,1,1
+37,Suboptimal learning rate,Suboptimal learning rate,Bad performance,eb24906,NikhilM98/learning-deeplearning/,Training,1,1,1,0,1
+38,Problematic early stopping,Problematic early stopping,Bad performance,5033eaa,nchlis/keras_pix2pix/,Training,0,0,1,1,1
+39,Suboptimal batch size,Suboptimal batch size,Bad performance,52e97fd,MockingLee/ExpressionRecognition/,Training,1,1,1,1,1
+41,Suboptimal number of epochs,Suboptimal number of epochs,Bad performance,a0532cf,kcct-fujimotolab/keras-super-resolution/,Training,1,0,0,1,1
+43,Wrong loss function calculation,Wrong loss function calculation,Bad performance,51ad509,sarus-tech/tf2-published-models/,Training,1,1,1,1,1
+46,Wrong optimisation function,Wrong optimisation function,Bad performance,6543925,ShyamPoovaiah/FacialKeypointsDetection/,Training,1,1,0,1,1
+51,Wrong optimisation function,Wrong optimisation function,Crash,b5c4c9e,hunkim/DeepLearningZeroToAll/,Training,0,1,1,1,1
+53,Suboptimal number of epochs,Suboptimal number of epochs,Bad performance,4307b16,shamitv/ImageClassifier/,Training,1,0,0,0,1
+57,Suboptimal learning rate,suboptimal learning rate,Bad performance,b9bc441,gabrieleangeletti/Deep-Learning-TensorFlow/,Training,1,1,1,1,1
+58,Epsilon for adam optimizer,Epsilon for adam optimizer,Bad performance,e02a510,ulmefors/Traffic-Sign-Classifier/,Training,1,0,0,1,1
+60,Suboptimal number of epochs,Suboptimal number of epochs,Bad performance,d44c90c,acflorea/keras-playground/,Training,1,0,1,1,1
+61,Wrong loss function calculation,Wrong loss function calculation,Bad performance,20d1b59,gabrieleangeletti/Deep-Learning-TensorFlow/,Training,0,1,1,1,1

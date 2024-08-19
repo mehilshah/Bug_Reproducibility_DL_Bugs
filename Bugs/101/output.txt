@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\101\main.py", line 221, in <module>
+    modl(x)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\101\main.py", line 194, in forward
+    de2 = torch.cat([en6add,de2_],1)
+RuntimeError: Sizes of tensors must match except in dimension 1. Expected size 5 but got size 4 for tensor number 1 in the list.

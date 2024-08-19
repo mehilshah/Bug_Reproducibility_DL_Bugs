@@ -1,0 +1,103 @@
+Bug ID,Architecture,Reproducible?,Code Snippet Present?,System Configuration Present?,Data Description Present?,Key Actions,Time Taken,Time for the Accepted Answer,Modification Type (Major/Minor),Type of Bug,Effort Level,Framework
+55328966,MLP,Yes,Yes,No,Yes,"Generated the requirements file based on the code, and corrected the path in read_csv method, removed the incorrect commands (!git clone) from .py file, and executed them individually, migrated the optimizer from Tensorflow v1 to v2.",36,10144 minutes,Minor,Training Bug,Easy,TF + Keras
+59278771,MLP,Yes,Yes,No,Yes,"Generated the requirements file, downloaded the dataset, and corrected the path in read_csv() method.",24,7 minutes,Minor,Model Bug,Easy,TF + Keras
+59325381,CNN,Yes,Yes,No,Yes,Generated the requirements file,36,16 minutes,Minor,Training Bug,Easy,TF + Keras
+50920908,-,Yes,No,No,No,"Wrote the complete code snippet, using Iris Dataset and defined a shallow neural network for predictions. Initialized the hyperparameters and the neural network layers. Modified the given code snippet to eliminate some unnecessary code.",50,67 minutes,Major,API Bug,Easy,TF + Keras
+48493755,MLP,No,No,No,No,"Not reproducible using Tensorflow v2.x and Python version 3.10. Cross-checked with Mehdi's implementation, and the code provided works for latest Tensorflow version. The Tensorflow version in requirements.txt is not supported by pip anymore, so I think this bug cannot be reproduced.",480,100 minutes,-,Training Bug,,TF + Keras
+61706535,MLP,Yes,Yes,No,Yes,"At first, couldn't find the related dataset, tried reproducing the bug with Iris and Sonar Data, but didn't work. So, used random Numpy arrays as the features and target variable and was able to reproduce the bug.",60,123 minutes,Major,API Bug,Medium,TF + Keras
+51421885,MLP,Yes,Yes,No,Yes,"Missing import, created the CSV from the text, and could reproduce the bug with the exact code snippet provided (without any modifications).",40,638 minutes,Minor,Training Bug,Easy,TF + Keras
+53119432,CNN,No,No,No,No,"Couldn't reproduce this bug, because even if the input shape is (24, 1) as specified in the bug. The new TF version seems to have fixed this issue, where even if the shape is 2 dimensions, it extrapolates with None, and allows for processing. Cross-checked Mehdi's implementation, and his code also seems to be working on my machine.",240,53 minutes,-,Tensor and Input Bug,,TF + Keras
+58844149,CNN,No,Yes,No,No,"I couldn't reproduce this bug because the generator is deprecated. The code snippet provided encounters an error when using numpy arrays as images and the MNIST dataset. The logs, which contain the details of the error, are present in the folder.",240,12 minutes,-,Tensor and Input Bug,,TF + Keras
+56103207,CNN,Yes,Yes,No,Yes,"Downloaded the data, parsed it into a .npy file, and changed the softmax layer size from 4 to 5 (compiler error, when the softmax layer size is 4)",70,47 minutes,Minor,Training Bug,Easy,TF + Keras
+55731589,CNN,Yes,Yes,No,No,"Generated a random input tensor, of the size mentioned in the error message.",24,977 minutes,Minor,Model Bug,Easy,TF + Keras
+51763983,LSTM,No,Yes,No,No,"Couldn't reproduce this bug, even with the input generated with correct shape. Cross-checked Mehdi's code, and couldn't reproduce the bug with his script as well.",240,68 minutes,-,Model Bug,,TF + Keras
+50079585,CNN,Yes,Yes,No,Yes,"Had difficulties collecting the dataset, however, the code provided for reproduction worked perfectly",70,644 minutes,Minor,Training Bug,Easy,TF + Keras
+45711636,CNN,Yes,Yes,No,Yes,"Changed the compatibility of the code from Tensorflow v1 to v2, and generated random tensor inputs.",40,150 minutes,Minor,Model Bug,Easy,TF + Keras
+45378493,CNN,Yes,Yes,No,Yes,"Generated random data, as per the data description, and migrated the code from v1 to v2.",80,210 minutes,Minor,Training Bug,Easy,TF + Keras
+43464835,CNN,Yes,Yes,No,Yes,"Generated the input data, with the provided dimensions, and added the missing value for the variables",50,728 minutes,Minor,Tensor and Input Bug,Easy,TF + Keras
+34311586,MLP,Yes,Yes,No,Yes,"Migrated the code from Tensorflow v1 to v2, but the code for reproduction was perfect, with proper imports and data.",10,151092 minutes,Minor,Training Bug,Easy,TF + Keras
+48082655,MLP,Yes,Yes,No,Yes,"No changes, perfect code for reproduction",10,21 mins,Minor,Training Bug,Easy,TF + Keras
+43895750,CNN,Yes,No,No,Yes,"Reproduced using random inputs and labels, and added few arbitary layers for testing. ",70,98 mins,Minor,Tensor and Input Bug,Easy,TF + Keras
+41651628,CNN,Yes,Yes,No,Yes,"Migrated the code from Tensorflow v1 to v2, the reproduction script was perfect.",20,7053 mins,Minor,Tensor and Input Bug,Easy,TF + Keras
+55955130,CNN,Yes,Yes,No,Yes,Reproduced using random inputs.,40,10 mins,Minor,Tensor and Input Bug,Easy,TF + Keras
+54255431,MLP,Yes,Yes,No,Yes,"Updated the gradient function, make_model(), optimizer as a part of migrating TF from v1 to v2.",60,24 mins,Minor,Tensor and Input Bug,Easy,TF + Keras
+50306988,CNN,Yes,Yes,No,Yes,"Added the missing import in the reproduction script, good reproduction script.",40,376 mins,Minor,Training Bug,Easy,TF + Keras
+47066635,MLP,No,Yes,Yes,Yes,"Not reproducible using Tensorflow v2.x and Python version 3.10. Cross-checked with Mehdi's implementation, and the code provided throws a different error for the latest version. The Tensorflow version in requirements.txt is not supported by pip anymore, so I think this bug cannot be reproduced.",240,212 mins,-,API Bug,,TF + Keras
+55142951,-,Yes,No,Yes,No,"Simple bug, missing Session attribute when TF moved from v1 to v2.",10,19 mins,Minor,API Bug,Easy,TF + Keras
+48221692,MLP,Yes,Yes,No,Yes,"Created the dataframe required for the test, and added the prediction code to the code snippet.",20,114 mins,Minor,Model Bug,Easy,TF + Keras
+34673164,MLP,Yes,Yes,No,Yes,"Created the dataset, as performance was in question. Migrated TF from v1 to v2.",80,227 mins,Major,Training Bug,Medium,TF + Keras
+47724077,MLP,No,Yes,No,Yes,"Bug was automatically resolved, as per the expected answer, and we could confirm the same. ",40,63 mins,Minor,Model Bug,,TF + Keras
+48934338,MLP,Yes,Yes,No,Yes,"Modified the final dense layer, and migrated Tensorflow from v1 to v2",40,1082 mins,Minor,Training Bug,Easy,TF + Keras
+39525358,MLP,Yes,Yes,No,Yes,"Generated the dataset, as per the data description, and migrated from Tensorflow v1 to v2.",30,22 mins,Minor,Training Bug,Easy,TF + Keras
+31880720,CNN,Yes,Yes,No,Yes,"Initialized the hyperparameters based on standard settings, and migrated TF from v1 to v2.",40,191 mins,Minor,Training Bug,Easy,TF + Keras
+51930566,MLP,Yes,Yes,No,Yes,"Used Iris Dataset to generate the training, and testing data, and moved the code from Tensorflow v1 to v2.",50,32 mins,Minor,Training Bug,Easy,TF + Keras
+38648195,MLP,Yes,Yes,No,Yes,"Migrated the multi-class generator method according to the new specification, and added the multi-class converter code for the SVM Classifier.",70,2050 mins,Minor,Training Bug,Easy,TF + Keras
+48251943,MLP,Yes,Yes,No,Yes,"Generated random data, as per the data description. ",20,26 mins,Minor,Training Bug,Easy,TF + Keras
+65228352,MLP,Yes,Yes,No,Yes,Could reproduce the bug without any changes in the reproduction script,20,43740 mins,Minor,Model Bug,Easy,TF + Keras
+69501047,VGG16,Yes,Yes,No,Yes,"Added the missing imports, defined the uninitialized variables, and updated the function definition of the summary() method.",40,105 mins,Minor,Model Bug,Easy,TF + Keras
+71652014,-,Yes,Yes,No,Yes,"Converted the cell-based inputs to variables, and replaced the ""pytorch"" with ""torch""",50,24 mins,Minor,Tensor and Input Bug,Easy,PyTorch
+69919854,-,No,No,Yes,No,"Couldn't reproduce because of lack of support of CUDA on my machine, and the OS used for development is also different.",70,46 mins,-,GPU Bug,,PyTorch
+71514447,-,Yes,Yes,No,No,"Added a CNN definition, with Adam's optimizer and defined it's hyperparameters. Fixed import errors, and compiler errors in the code snippet. ",90,35 mins,Major,Training Bug,Medium,PyTorch
+74376277,CNN,No,Yes,No,No,"Couldn't reproduce, as the error was in the dataset for the end user, and that dataset was not provided.",70,67 mins,-,API Bug,,TF + Keras
+66720543,MLP,Yes,Yes,No,No,"Reproduced using random input data generation, and proper inputs",40,159 mins,Minor,Tensor and Input Bug,Easy,PyTorch
+71457035,MLP,Yes,Yes,No,No,"Reproduced using random input data, and fixed the compiler error of incorrect variables.",50,88 mins,Minor,Training Bug,Easy,PyTorch
+63083555,LSTM,Yes,Yes,No,No,"Generated random timeseries data, using custom defined number of steps and features, and added the code for training the model.",60,210 mins,Minor,Training Bug,Easy,TF + Keras
+65204482,MLP,No,Yes,No,Yes,"Couldn't reproduce, as the data description was unclear, and since this was the performance bug, reproducibility is difficult without the data description and the statistics about the distribution and type of data.",90,1129 mins,-,Training Bug,,TF + Keras
+69125887,-,No,Yes,No,No,"Couldn't reproduce, as the code for the dataloader, input definitions, loss function and accuracy functions were missing. Without the data definition, cannot reproduce the training loop in the bug report, which makes it impossible to note the GPU consumption.",240,888 mins,-,GPU Bug,,PyTorch
+72099844,LR,Yes,Yes,No,Yes,"Fixed the imports, and could reproduce the bug",50,43 mins,Minor,Tensor and Input Bug,Easy,PyTorch
+74743921,MLP,No,Yes,No,No,"Couldn't reproduce, as keras has deprecated the scikit-learn wrapper in the newer versions.",120,5943 mins,-,Training Bug,,TF + Keras
+63206710,MLP,Yes,Yes,No,No,"Added the missing imports, and could reproduce the bug with the script",40,45 mins,Minor,Model Bug,Easy,TF + Keras
+64809589,-,No,Yes,No,No,"Network definition of DBNN is missing, along with the data required. So, too many critical aspects are missing, in addition to the system configuration.",120,3774 mins,-,GPU Bug,,PyTorch
+68011125,GAN,Yes,Yes,No,No,"Added the missing imports, and custom definition of TransistionLayer to reproduce the bug. Also, changed the system specific variables to hardcoded custom defined variables for reproducibility",90,269 mins,Major,API Bug,Medium,PyTorch
+68546140,-,No,No,No,No,"Couldn't reproduce as it was a 1660Ti GPU specific error, which cannot be replicated on my machine as well as Google Colab.",60,37 mins,-,GPU Bug,,TF + Keras
+65522548,MLP,Yes,Yes,No,Yes,"Initialized hyperparameters, generated random tensors and labels for reproducing the bug",90,12 mins,Major,Training Bug,Medium,PyTorch
+63566232,Transformers,Yes,Yes,No,No,"Completed the code snippet by adding imports, Encoder and Decoder, based on the understanding of the paper ""Attention is All You Need""",120,3614 mins,Major,Model Bug,Medium,PyTorch
+70159221,-,Yes,Yes,No,Yes,"Fixed the imports, and could reproduce the bug",30,191 mins,Minor,Tensor and Input Bug,Easy,PyTorch
+65993928,Variational RNN,Yes,Yes,No,Yes,Could reproduce the bug without any changes in the reproduction script,10,57 mins,Minor,API Bug,Easy,PyTorch
+62887574,-,Yes,Yes,No,Yes,Could reproduce the bug on Colab without any changes in the reproduction script,20,47 mins,Minor,GPU Bug,Easy,PyTorch
+73849758,LSTM + MLP,Yes,Yes,No,Yes,Generated random input data based on the data definition provided.,40,278 mins,Minor,Model Bug,Easy,TF + Keras
+63176966,-,Yes,Yes,No,No,"Used sample image, and could reproduce the bug with the provided code snippet.",30,6686 mins,Minor,Training Bug,Easy,TF + Keras
+66472843,-,No,Yes,No,No,Couldn't reproduce as the method definition of the buggy method (which is custom-written) is missing.,90,26 mins,-,Tensor and Input Bug,,TF + Keras
+61781193,LSTM,Yes,Yes,No,Yes,"Initialized the hyperparameters and the word embeddings, and generated data based on the data distribution and description present. ",110,1011 mins,Major,Training Bug,Medium,PyTorch
+70233512,-,Yes,Yes,No,No,Could reproduce the code with the verbatim script.,20,58 mins,Minor,Tensor and Input Bug,Easy,TF + Keras
+72872021,CNN,Yes,Yes,No,Yes,"Generated random image for the data, and replaced the pickle based loading of labels to hard-coded labels.",60,301 mins,Minor,Model Bug,Easy,TF + Keras
+66818548,ResNet,Yes,Yes,No,Yes,Generated random input data based on the data definition provided.,50,61 mins,Minor,Training Bug,Easy,PyTorch
+64576751,MLP,Yes,Yes,No,Yes,"Generated random inputs based on the data schema, fixed the imports",60,111 mins,Minor,API Bug,Easy,TF + Keras
+65992364,RCNN,Yes,No,No,Yes,"Removed the buggy Vulkan parameter from the optimize_for_mobile method to reproduce the bug. With the presence of Vulkan parameter, the code throws a missing operation error for creating the linear context.",70,301 mins,Minor,Training Bug,Easy,PyTorch
+75915809,Transfer Learning,Yes,Yes,No,Yes,"Added the missing imports, downloaded the dataset, changed the import from copy to deepcopy, as the deepcopy has moved as a standalone import rather than a part of copy.",90,982 mins,Major,Training Bug,Medium,PyTorch
+69284837,Autoencoder,Yes,No,No,No,Defined multiple custom Autoencoders based on the standard definition and used MNIST Dataset for training instead of the random data provided by the user. Fixed imports and initialized random hyperparameters in the usual range.,2,89 mins,Major,Training Bug,Medium,PyTorch
+69704467,Attention,Yes,Yes,No,Yes,"Generated random inputs based on the data definition, added the imports, and defined the number of encoder and decoder tokens randomly.",50,307 mins,Minor,Model Bug,Easy,TF + Keras
+74610068,Attention,Yes,Yes,No,Yes,Perfect reproduction script,20,152 mins,Minor,Model Bug,Easy,TF + Keras
+69660201,BERT,Yes,Yes,No,No,"Fixed the imports, generated dummy input data and used the standard Hub URL's for preprocessor and encoder. ",90,78 mins,Minor,Model Bug,Easy,TF + Keras
+67730059,MLP,Yes,Yes,No,Yes,"Migrated the input shape from 3 to (3,), and made the call to summary method.",50,7 mins,Minor,Model Bug,Easy,TF + Keras
+63073170,MLP,Yes,Yes,No,No,"Downloaded the data, added the imports, initialized random batch size",40,39 mins,Minor,Model Bug,Easy,TF + Keras
+68152276,BERT,Yes,Yes,No,No,Added the missing imports,20,18 mins,Minor,Model Bug,Easy,TF + Keras
+72845812,Transformers,Yes,Yes,No,No,Perfect reproduction script,20,259 mins,Minor,Model Bug,Easy,PyTorch
+71765132,Gaussian Mixture Model,Yes,Yes,No,Yes,"Added the missing imports, initialized the random iterations number.",60,187 mins,Minor,Model Bug,Easy,TF + Keras
+76186890,Transformers,Yes,Yes,No,Yes,Perfect reproduction script,20,3609 mins,Minor,Model Bug,Easy,PyTorch
+73349963,CNN,Yes,Yes,No,Yes,"Added the missing import, configured the dataloader, and fixed the compiler errors because of API migrations.",80,71 mins,Minor,Model Bug,Easy,PyTorch
+65801034,DenseNet,No,Yes,No,Yes,"Could not reproduce the same issue with PyTorch 2.1.0, the issue was in PyTorch 1.7.0",100,1438 mins,-,Model Bug,,PyTorch
+66092456,-,Yes,Yes,No,Yes,"Set up the code on a high performance machine with a stronger GPU, fixed imports.",80,1511 mins,Minor,Mixed Bug,Easy,TF + Keras
+65949258,LR,Yes,Yes,No,No,"Added the missing imports, and initialized the random hyperparameters for the optimizer.",60,130 mins,Minor,Mixed Bug,Easy,TF + Keras
+73966797,CNN,Yes,Yes,No,Yes,"Missing import, random initialization of hyperparameters, fixed compiler errors because of API migrations, and added correct referencing for the CIFAR dataset.",100,1260 mins,Major,Mixed Bug,Medium,TF + Keras
+65716989,-,Yes,Yes,No,Yes,"Added the missing imports, and generated random input tensors.",60,51 mins,Minor,Mixed Bug,Easy,TF + Keras
+63485453,-,Yes,Yes,No,No,"Added the missing imports, and added debugging logs to verify the shape of ragged tensor.",30,1114 mins,Minor,Tensor and Input Bug,Easy,TF + Keras
+73276139,-,Yes,Yes,No,No,Perfect reproduction script,10,60 mins,Minor,Tensor and Input Bug,Easy,PyTorch
+64601301,CNN,No,Yes,No,No,"Couldn't reproduce because of missing data dimensions, and the nature of data provided.",120,110 mins,-,Tensor and Input Bug,,PyTorch
+63204176,CNN,Yes,Yes,No,Yes,"Added the missing imports, defined the hyperparameters and uninitialized variables, and added the dummy FC networks along with MNIST dataset for reproducing the bug.",110,4 mins,Major,Tensor and Input Bug,Medium,PyTorch
+66260320,Autoencoder,No,Yes,No,Yes,"Not reproducible in PyTorch 2.1.0, as the argument dtype is now not supported, this issue might have been fixed during version upgrade.",60,10 mins,-,Tensor and Input Bug,,TF + Keras
+73266661,ResNet,Yes,Yes,No,Yes,"Added the missing imports, defined the random input tensors, and added the method call to instantiate the model.",80,192 mins,Minor,Tensor and Input Bug,Easy,PyTorch
+70316929,GAN,Yes,Yes,No,Yes,"Procured the dataset from Kaggle, and used the code snippet to reproduce the bug",50,70 mins,Minor,Tensor and Input Bug,Easy,PyTorch
+70373342,-,Yes,Yes,No,Yes,Perfect reproduction script,10,668 mins,Minor,Tensor and Input Bug,Easy,TF + Keras
+74198404,NLP,Yes,Yes,No,Yes,"Fixed the compiler errors in the code snippet, and made the call to extract parts of tokens based on the input tensor.",60,4415 mins,Minor,Tensor and Input Bug,Easy,PyTorch
+72099844,LR,Yes,Yes,No,Yes,Added the missing imports,30,43 mins,Minor,Tensor and Input Bug,Easy,TF + Keras
+67764431,-,Yes,Yes,No,Yes,Added the missing imports,20,70 mins,Minor,Tensor and Input Bug,Easy,TF + Keras
+69137834,CNN,Yes,Yes,No,Yes,"Added the missing imports, generated random inputs based on the data distribution and data shape.",50,559 mins,Minor,API Bug,Easy,TF + Keras
+66524542,Transformers,Yes,Yes,No,No,"Added the missing import, replaced custom model with BERT Uncased from Hugging face, added the tokenizer definition, defined a sample input text and it's corresponding encoding call.",90,43 mins,Major,API Bug,Medium,PyTorch
+65889068,VGG19,Yes,Yes,No,Yes,Perfect reproduction script,20,726 mins,Minor,API Bug,Easy,TF + Keras
+68962721,-,Yes,Yes,Yes,No,"Reproduced the bug by creating the mismatch between CUDA, cuDNN and Tensorflow versions for the virtual environment.",80,13274 mins,Major,GPU Bug,Medium,TF + Keras
+62887574,-,Yes,Yes,No,Yes,Perfect reproduction script,30,47 mins,Minor,GPU Bug,Easy,TF + Keras
+66489112,-,Yes,Yes,No,No,Changed the path of the model and made the function call of the defined buggy method.,40,35 mins,Minor,API Bug,Easy,PyTorch
+71223747,-,Yes,Yes,No,Yes,Perfect reproduction script,20,68 mins,Minor,API Bug,Easy,PyTorch
+54417736,CNN,Yes,Yes,No,Yes,Added the imports and made the function call of the defined buggy method.,40,59 mins,Minor,Tensor and Input Bug,Easy,PyTorch
+69549126,MLP,Yes,Yes,No,Yes,"Added the imports, resolved dependencies, and generated random input tensors",50,66 mins,Minor,Tensor and Input Bug,Easy,PyTorch

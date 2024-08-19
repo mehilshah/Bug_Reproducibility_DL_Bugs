@@ -1,0 +1,8 @@
+I have a multiclass classification machine learning application for which I want to calculate the f1 score using tensorflow. The predicted and actual values are stored in pandas dataframes y_pred and y_act respectively. Both are populated with 1's and 0's. So I do something like this (Code Snippet provided below):
+However I get the following error
+TypeError: Cannot convert 1e-12 to EagerTensor of dtype int32.
+There must be something with the type casting from pandas to tensorflow which is throwing the error. I have tried a series of mitigations to no avail.
+I tried converting the numpy arrays to tensors like so: pred_tf = tf.convert_to_tensor(pred_numpy, numpy.int32).
+I tried ensuring the pandas dataframe has no 1e-12 instances with: y_pred = y_pred.replace(1e-12, 0).
+I tried converting to numpy without the numpy.int32 option.
+However I still get the same error. Any tips for converting from pandas to tensors successfully without getting this error?

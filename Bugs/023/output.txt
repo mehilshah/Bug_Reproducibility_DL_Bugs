@@ -1,0 +1,26 @@
+2023-07-01 11:33:37.565610: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Epoch 1/5
+
+1/1 [==============================] - ETA: 0s - loss: 0.6897 - accuracy: 0.5000
+1/1 [==============================] - 1s 669ms/step - loss: 0.6897 - accuracy: 0.5000
+Epoch 2/5
+
+1/1 [==============================] - ETA: 0s - loss: 0.6896 - accuracy: 0.5000
+1/1 [==============================] - 0s 3ms/step - loss: 0.6896 - accuracy: 0.5000
+Epoch 3/5
+
+1/1 [==============================] - ETA: 0s - loss: 0.6895 - accuracy: 0.5000
+1/1 [==============================] - 0s 50ms/step - loss: 0.6895 - accuracy: 0.5000
+Epoch 4/5
+
+1/1 [==============================] - ETA: 0s - loss: 0.6894 - accuracy: 0.5000
+1/1 [==============================] - 0s 0s/step - loss: 0.6894 - accuracy: 0.5000
+Epoch 5/5
+
+1/1 [==============================] - ETA: 0s - loss: 0.6893 - accuracy: 0.5000
+1/1 [==============================] - 0s 0s/step - loss: 0.6893 - accuracy: 0.5000
+
+1/1 [==============================] - ETA: 0s
+1/1 [==============================] - 0s 179ms/step
+Accuracy score: 0.5

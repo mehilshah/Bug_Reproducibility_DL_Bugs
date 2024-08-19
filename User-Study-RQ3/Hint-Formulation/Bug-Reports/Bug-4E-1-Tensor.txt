@@ -1,0 +1,8 @@
+I was trying to train a simple Keras network for classification when I faced the following error. I know there is something wrong with my inputs but I couldn't figure out how to fix it. Here is my code (given below)
+Dataset Shape:
+x_train : float32 0.0 1.0 (2444, 64, 64, 1)
+y_train : float32 0.0 1.0 (2444, 2)
+x_test : float32 0.0 1.0 (9123, 64, 64, 1)
+y_test : float32 0.0 1.0 (9123, 2).
+Error:
+ValueError: Dimensions must be equal, but are 2 and 32 for '{{node Equal}} = Equal[T=DT_FLOAT, incompatible_shape_error=true](IteratorGetNext:1, Cast_1)' with input shapes: [?,2], [?,32,32].

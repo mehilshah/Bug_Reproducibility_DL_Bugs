@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\XYZ\Downloads\Bug Reproducibility\Bugs\025\main.py", line 3, in <module>
+    sess = tf.Session()
+AttributeError: module 'tensorflow' has no attribute 'Session'. Did you mean: 'version'?

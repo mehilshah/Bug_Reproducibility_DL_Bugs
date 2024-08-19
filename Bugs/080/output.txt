@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\080\main.py", line 19, in <module>
+    optimizer = torch.optim.SGD(params = LR_model.parameters(), lr=learn_rate)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\torch\optim\sgd.py", line 27, in __init__
+    super().__init__(params, defaults)
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\torch\optim\optimizer.py", line 187, in __init__
+    raise ValueError("optimizer got an empty parameter list")
+ValueError: optimizer got an empty parameter list

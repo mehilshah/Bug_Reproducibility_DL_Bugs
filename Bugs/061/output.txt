@@ -1,0 +1,10 @@
+2023-07-13 11:25:10.773549: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Traceback (most recent call last):
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\Bugs\061\original_code_snippet.py", line 6, in <module>
+    print(tf.concat([a, b], axis=0))
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 153, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\Mehil Shah\Downloads\Research Projects\Bug Reproducibility\venv\lib\site-packages\tensorflow\python\framework\ops.py", line 6656, in raise_from_not_ok_status
+    raise core._status_to_exception(e) from None  # pylint: disable=protected-access
+tensorflow.python.framework.errors_impl.InvalidArgumentError: {{function_node __wrapped__ConcatV2_N_2_device_/job:localhost/replica:0/task:0/device:CPU:0}} ConcatOp : Ranks of all input tensors should match: shape[0] = [2,3] vs. shape[1] = [5] [Op:ConcatV2] name: concat

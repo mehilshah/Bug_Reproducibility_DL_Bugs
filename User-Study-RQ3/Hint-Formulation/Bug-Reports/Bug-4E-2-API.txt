@@ -1,0 +1,20 @@
+I am trying to use a neural network to predict the price of houses. Here is what the top of the dataset looks like.
+
+    Price   Beds    SqFt    Built   Garage  FullBaths   HalfBaths   LotSqFt
+    485000  3       2336    2004    2       2.0          1.0        2178.0
+    430000  4       2106    2005    2       2.0          1.0        2178.0
+    445000  3       1410    1999    1       2.0          0.0        3049.0
+I am using the ReLU activation function. When I try to evaluate my model on my test data, I get this TypeError: unsupported operand type(s) for +=: 'Dense' and 'str'.
+I looked at the types of the columns from my original dataframe, and everything looks fine.
+print(df.dtypes)
+## Output
+#Price          int64
+#Beds           int64
+#SqFt           int64
+#Built          int64
+#Garage         int64
+#FullBaths    float64
+#HalfBaths    float64
+#LotSqFt      float64
+#dtype: object.
+I'm not sure if I am messing something up in my neural network to cause this error.

@@ -1,0 +1,59 @@
+Tensorflow Posts
+
+SELECT CONCAT('https://stackoverflow.com/questions/', p.Id) AS QuestionLink,
+p.Title,
+p.Score,
+p.Tags,
+'tensorflow'
+FROM Posts p
+WHERE (p.Tags LIKE '%tensorflow%'
+AND NOT p.Tags LIKE '%pytorch%'
+AND NOT p.Tags LIKE '%keras%')
+AND (LOWER(p.Title) NOT LIKE '%how%'
+AND LOWER(p.Title) NOT LIKE '%install%'
+AND LOWER(p.Title) NOT LIKE '%build%')
+AND p.AcceptedAnswerId IS NOT NULL
+AND p.CreationDate >= DATEADD(YEAR, -3, GETDATE())
+AND p.Score > 0
+AND p.Body LIKE '%<code>%</code>%'
+ORDER BY p.Score DESC;
+
+Keras Posts
+
+SELECT CONCAT('https://stackoverflow.com/questions/', p.Id) AS QuestionLink,
+p.Title,
+p.Score,
+p.Tags,
+'keras'
+FROM Posts p
+WHERE (p.Tags LIKE '%keras%'
+AND NOT p.Tags LIKE '%tensorflow%'
+AND NOT p.Tags LIKE '%pytorch%')
+AND (LOWER(p.Title) NOT LIKE '%how%'
+AND LOWER(p.Title) NOT LIKE '%install%'
+AND LOWER(p.Title) NOT LIKE '%build%')
+AND p.AcceptedAnswerId IS NOT NULL
+AND p.CreationDate >= DATEADD(YEAR, -3, GETDATE())
+AND p.Score > 0
+AND p.Body LIKE '%<code>%</code>%'
+ORDER BY p.Score DESC;
+
+PyTorch Posts
+
+SELECT CONCAT('https://stackoverflow.com/questions/', p.Id) AS QuestionLink,
+       p.Title,
+       p.Score,
+       p.Tags,
+       'pytorch'
+FROM Posts p
+WHERE (p.Tags LIKE '%pytorch%'
+       AND NOT p.Tags LIKE '%tensorflow%'
+       AND NOT p.Tags LIKE '%keras%')
+      AND (LOWER(p.Title) NOT LIKE '%how%'
+           AND LOWER(p.Title) NOT LIKE '%install%'
+           AND LOWER(p.Title) NOT LIKE '%build%')
+      AND p.AcceptedAnswerId IS NOT NULL
+      AND p.CreationDate >= DATEADD(YEAR, -3, GETDATE())
+      AND p.Score > 0
+      AND p.Body LIKE '%<code>%</code>%'
+ORDER BY p.Score DESC;

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\XYZ\Downloads\Research Projects\Bug Reproducibility\Bugs\037\main.py", line 14, in <module>
+    final = torch.tensor([apply_i(a) for a in a])
+ValueError: only one element tensors can be converted to Python scalars

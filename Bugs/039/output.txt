@@ -1,0 +1,10 @@
+Train Loss: 1.324 | Train Accuracy: 60.200
+Train Loss: 2.744 | Train Accuracy: 73.800
+Train Loss: 4.028 | Train Accuracy: 79.533
+Train Loss: 5.204 | Train Accuracy: 83.300
+Train Loss: 5.358 | Train Accuracy: 85.700
+Train Loss: 6.459 | Train Accuracy: 87.483
+Train Loss: 7.522 | Train Accuracy: 89.043
+Train Loss: 8.572 | Train Accuracy: 90.225
+Train Loss: 9.605 | Train Accuracy: 91.244
+Train Loss: 10.627 | Train Accuracy: 92.100

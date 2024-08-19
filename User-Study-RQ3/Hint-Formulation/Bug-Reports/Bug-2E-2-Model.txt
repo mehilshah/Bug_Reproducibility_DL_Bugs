@@ -1,0 +1,14 @@
+I'm still very new to neural networks. I try to achieve the following with Keras:
+I have a set of data where f(x) = x^2 + 3. Like this
+x       f(x)
+ -10    103
+-9.9    101.01
+-9.8    99.04
+-9.7    97.09
+...
+9.7     97.09
+9.8     99.04
+9.9    101.01
+10     103.
+So I try to build a model that can predict values f(x) based on x. I think that must be a simple thing but I couldn't find any hint. I get only outputs ranging from 0 to 1 (I guess due to normalization?) and they also seem to be bad.
+I suspect I need to somehow cater for the fact that expect an interval value as an output, not a nominal or ordinal value. Any idea?

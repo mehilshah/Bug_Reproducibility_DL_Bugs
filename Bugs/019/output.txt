@@ -1,0 +1,26 @@
+2023-07-01 13:02:57.360876: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Traceback (most recent call last):
+  File "C:\Users\XYZ\Downloads\Bug Reproducibility\Bugs\019\main.py", line 13, in <module>
+    model.predict(data)
+  File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\MEHILS~1\AppData\Local\Temp\__autograph_generated_filecc3b3vsf.py", line 15, in tf__predict_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+ValueError: in user code:
+
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\engine\training.py", line 2137, in predict_function  *
+        return step_function(self, iterator)
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\engine\training.py", line 2123, in step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\engine\training.py", line 2111, in run_step  **
+        outputs = model.predict_step(data)
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\engine\training.py", line 2079, in predict_step
+        return self(x, training=False)
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+        raise e.with_traceback(filtered_tb) from None
+    File "C:\Users\XYZ\Downloads\Bug Reproducibility\venv\lib\site-packages\keras\engine\input_spec.py", line 295, in assert_input_compatibility
+        raise ValueError(
+
+    ValueError: Input 0 of layer "sequential" is incompatible with the layer: expected shape=(None, 286, 384, 1), found shape=(None, None, 286, 384, 1)
+

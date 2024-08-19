@@ -1,0 +1,83 @@
+2023-07-01 11:22:04.895571: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+(24, 1)
+Epoch 1/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6931 - accuracy: 0.9583
+1/1 [==============================] - 2s 2s/step - loss: 0.6931 - accuracy: 0.9583 - val_loss: 0.6927 - val_accuracy: 0.9583
+Epoch 2/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6927 - accuracy: 0.9583
+1/1 [==============================] - 0s 33ms/step - loss: 0.6927 - accuracy: 0.9583 - val_loss: 0.6922 - val_accuracy: 0.9583
+Epoch 3/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6922 - accuracy: 0.9583
+1/1 [==============================] - 0s 50ms/step - loss: 0.6922 - accuracy: 0.9583 - val_loss: 0.6918 - val_accuracy: 0.9583
+Epoch 4/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6918 - accuracy: 0.9583
+1/1 [==============================] - 0s 35ms/step - loss: 0.6918 - accuracy: 0.9583 - val_loss: 0.6913 - val_accuracy: 0.9583
+Epoch 5/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6913 - accuracy: 0.9583
+1/1 [==============================] - 0s 30ms/step - loss: 0.6913 - accuracy: 0.9583 - val_loss: 0.6909 - val_accuracy: 0.9583
+Epoch 6/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6909 - accuracy: 0.9583
+1/1 [==============================] - 0s 40ms/step - loss: 0.6909 - accuracy: 0.9583 - val_loss: 0.6904 - val_accuracy: 0.9583
+Epoch 7/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6904 - accuracy: 0.9583
+1/1 [==============================] - 0s 41ms/step - loss: 0.6904 - accuracy: 0.9583 - val_loss: 0.6899 - val_accuracy: 0.9583
+Epoch 8/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6899 - accuracy: 0.9583
+1/1 [==============================] - 0s 37ms/step - loss: 0.6899 - accuracy: 0.9583 - val_loss: 0.6895 - val_accuracy: 0.9583
+Epoch 9/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6895 - accuracy: 0.9583
+1/1 [==============================] - 0s 41ms/step - loss: 0.6895 - accuracy: 0.9583 - val_loss: 0.6890 - val_accuracy: 0.9583
+Epoch 10/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6890 - accuracy: 0.9583
+1/1 [==============================] - 0s 47ms/step - loss: 0.6890 - accuracy: 0.9583 - val_loss: 0.6886 - val_accuracy: 0.9583
+Epoch 11/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6886 - accuracy: 0.9583
+1/1 [==============================] - 0s 33ms/step - loss: 0.6886 - accuracy: 0.9583 - val_loss: 0.6881 - val_accuracy: 0.9583
+Epoch 12/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6881 - accuracy: 0.9583
+1/1 [==============================] - 0s 33ms/step - loss: 0.6881 - accuracy: 0.9583 - val_loss: 0.6877 - val_accuracy: 0.9583
+Epoch 13/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6877 - accuracy: 0.9583
+1/1 [==============================] - 0s 37ms/step - loss: 0.6877 - accuracy: 0.9583 - val_loss: 0.6872 - val_accuracy: 0.9583
+Epoch 14/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6872 - accuracy: 0.9583
+1/1 [==============================] - 0s 43ms/step - loss: 0.6872 - accuracy: 0.9583 - val_loss: 0.6868 - val_accuracy: 0.9583
+Epoch 15/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6868 - accuracy: 0.9583
+1/1 [==============================] - 0s 34ms/step - loss: 0.6868 - accuracy: 0.9583 - val_loss: 0.6863 - val_accuracy: 0.9583
+Epoch 16/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6863 - accuracy: 0.9583
+1/1 [==============================] - 0s 33ms/step - loss: 0.6863 - accuracy: 0.9583 - val_loss: 0.6858 - val_accuracy: 0.9583
+Epoch 17/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6858 - accuracy: 0.9583
+1/1 [==============================] - 0s 35ms/step - loss: 0.6858 - accuracy: 0.9583 - val_loss: 0.6854 - val_accuracy: 0.9583
+Epoch 18/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6854 - accuracy: 0.9583
+1/1 [==============================] - 0s 31ms/step - loss: 0.6854 - accuracy: 0.9583 - val_loss: 0.6849 - val_accuracy: 0.9583
+Epoch 19/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6849 - accuracy: 0.9583
+1/1 [==============================] - 0s 40ms/step - loss: 0.6849 - accuracy: 0.9583 - val_loss: 0.6845 - val_accuracy: 0.9583
+Epoch 20/20
+
+1/1 [==============================] - ETA: 0s - loss: 0.6845 - accuracy: 0.9583
+1/1 [==============================] - 0s 41ms/step - loss: 0.6845 - accuracy: 0.9583 - val_loss: 0.6840 - val_accuracy: 0.9583

@@ -1,0 +1,24 @@
+I have a PyTorch model and I'm trying to test it by performing a forward pass. The model is defined below.
+If I try:
+modl = ResUnet((1,320,320), 1)
+x = torch.rand(1, 1, 320, 320)
+modl(x)
+It throws an error
+---------------------------------------------------------------------------
+RuntimeError                              Traceback (most recent call last)
+<ipython-input-46-4ddc821c365b> in <module>
+----> 1 modl(x).
+~/.conda/envs/torch0.4/lib/python3.6/site-packages/torch/nn/modules/module.py in __call__(self, *input, **kwargs)
+    475             result = self._slow_forward(*input, **kwargs)/
+    476         else:.
+--> 477             result = self.forward(*input, **kwargs).
+    478         for hook in self._forward_hooks.values():.
+    479             hook_result = hook(self, input, result).
+<ipython-input-36-f9eeefa3c0b8> in forward(self, x).
+    221         de2_ = self.d2(de1).
+    222         #print de2_.size().
+--> 223         de2 = torch.cat([en6add,de2_],1).
+    224         #print de2.size().
+    225
+RuntimeError: invalid argument 0: Sizes of tensors must match except in dimension 1. Got 5 and 4 in dimension 2 at /opt/conda/conda-bld/pytorch_1535491974311/work/aten/src/TH/generic/THTensorMath.cpp:3616
+I figure the problem is caused by the input size not being a power of 2 but I am not sure how to rectify it for the given input dimenstions (320, 320).
